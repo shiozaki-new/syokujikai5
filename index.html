@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
     <title>syokujikai3</title>
+    <style>
+      /* PhotoGallery hover zoom (static override for GitHub Pages) */
+      section#gallery figure { overflow: hidden; border-radius: 10px; }
+      section#gallery img { display:block; will-change: transform; transition: transform .25s ease; cursor: zoom-in; }
+      @media (hover: hover) {
+        section#gallery img:hover { transform: scale(1.05); }
+      }
+      /* tap feedback on touch devices */
+      @media (hover: none) {
+        section#gallery img:active { transform: scale(1.03); }
+      }
+    </style>
     <script type="module" crossorigin src="./assets/index-DM9z_cAI.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CSaeobnr.css">
   </head>
